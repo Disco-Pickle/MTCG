@@ -1,6 +1,6 @@
 ﻿namespace MTCG.CardClass
 {
-    internal class MonsterCard : Card
+    public class MonsterCard : Card
     {
     }
 }
