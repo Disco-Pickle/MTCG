@@ -18,6 +18,7 @@ namespace MTCG.UserClass
         #region Credentials
         public string Username { get; private set; }
         public string Password { get; private set; }
+        public string Token { get; private set; }
 
         public void Register()
         {
@@ -30,7 +31,7 @@ namespace MTCG.UserClass
             // User is prompted for username
             // User is prompted for password
             // Credentials are compared to username-password pairs saved on server
-            // Appropriate response is sent
+            // Server sends a token, which is saved in their User object (implement logout which deletes token as well?)
         }
         #endregion
 
@@ -66,6 +67,20 @@ namespace MTCG.UserClass
             // This user and an opponent battle
             // Opponent is decided by the server
             // Winnner: +3 ELO, loser: -5 ELO
+            // Update both users on the server
+        }
+        #endregion
+
+        #region Profile
+        public void ViewProfile()
+        {
+            // Data is fetched from the server
+            // A profile page is displayed in the console
+        }
+        public void EditProfile()
+        {
+            // User changes their username, password, or any other further properties
+            // Changes are sent to the server
         }
         #endregion
     }
