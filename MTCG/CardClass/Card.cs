@@ -1,6 +1,6 @@
-﻿namespace MTCG
+﻿namespace MTCG.CardClass
 {
-    public class Card
+    public abstract class Card
     {
         #region Constructors
         public Card()

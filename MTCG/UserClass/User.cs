@@ -1,11 +1,9 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace MTCG
+﻿namespace MTCG.UserClass
 {
     public class User
     {
         #region Constructors
-        public User() 
+        public User()
         {
             username = "default";
             password = "password";
