@@ -9,7 +9,9 @@ namespace MTCG.UserClass
         {
             Username = "";
             Password = "";
+            Token = "";
             Stack = [];
+            Deck = [];
             Coins = 20;
             ELO = 100;
         }
