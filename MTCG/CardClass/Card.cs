@@ -5,22 +5,22 @@
         #region Constructors
         public Card()
         {
-            name = "";
-            damage = 0;
-            element = "";
+            Name = "";
+            Damage = 0;
+            Element = "";
         }
         public Card(string name, int damage, string element)
         {
-            this.name = name;
-            this.damage = damage;
-            this.element = element;
+            Name = name;
+            Damage = damage;
+            Element = element;
         }
         #endregion
 
         #region Attributes
-        public string name { get; private set; }
-        public int damage { get; private set; }
-        public string element { get; private set; }
+        public string Name { get; private set; }
+        public int Damage { get; } // No setter = read only property (keyword readonly is only allowed for fields), https://stackoverflow.com/questions/3917796/how-to-implement-a-read-only-property
+        public string Element { get; private set; }
         #endregion
     }
 }
