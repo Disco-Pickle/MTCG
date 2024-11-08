@@ -15,6 +15,16 @@ namespace MTCG.UserClass
             Coins = 20;
             ELO = 100;
         }
+        public User(string username, string password)
+        {
+            Username = username;
+            Password = password;
+            Token = "";
+            Stack = [];
+            Deck = [];
+            Coins = 20;
+            ELO = 100;
+        }
         #endregion
 
         #region Credentials
@@ -40,7 +50,7 @@ namespace MTCG.UserClass
         #region Ressources
         public Card[] Stack { get; private set; }
         public Card[] Deck { get; private set; }
-        public int Coins;
+        public int Coins { get; private set; }
 
         public void AcquireCards()
         {
@@ -62,7 +72,7 @@ namespace MTCG.UserClass
         #endregion
 
         #region Competition
-        public int ELO;
+        public int ELO { get; private set; }
 
         public void Battle()
         {
