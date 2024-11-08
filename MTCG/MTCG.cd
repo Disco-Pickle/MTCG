@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MTCG.CardClass.Card">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardClass\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.CardClass.MonsterCard">
+    <Position X="8" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardClass\MonsterCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.CardClass.SpellCard">
+    <Position X="5" Y="3" Width="1.75" />
+    <InheritanceLine Type="MTCG.CardClass.Card" FixedToPoint="true">
+      <Path>
+        <Point X="7.625" Y="2.44" />
+        <Point X="7.625" Y="2.625" />
+        <Point X="5.875" Y="2.625" />
+        <Point X="5.875" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardClass\SpellCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.ScoreboardClass.Scoreboard">
+    <Position X="1" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ScoreboardClass\Scoreboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.UserClass.User">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Stack" Type="MTCG.CardClass.Card">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.675" Y="0.066" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACoAAgAAAgQMACAAAgAABQAACBABQAAABAAA=</HashCode>
+      <FileName>UserClass\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Stack" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
