@@ -18,9 +18,9 @@
         #endregion
 
         #region Attributes
-        public string Name { get; private set; }
+        public string Name { get; protected set; }
         public int Damage { get; } // No setter = read only property (keyword readonly is only allowed for fields), https://stackoverflow.com/questions/3917796/how-to-implement-a-read-only-property
-        public string Element { get; private set; }
+        public string Element { get; protected set; }
         #endregion
     }
 }
