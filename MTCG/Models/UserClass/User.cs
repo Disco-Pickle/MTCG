@@ -1,12 +1,13 @@
-﻿using MTCG.CardClass;
+﻿using MTCG.Models.CardClass;
 
-namespace MTCG.UserClass
+namespace MTCG.Models.UserClass
 {
     public class User
     {
         #region Constructors
         public User()
         {
+            ID = S_NextID++;
             Username = "";
             Password = "";
             Token = "";
@@ -17,6 +18,7 @@ namespace MTCG.UserClass
         }
         public User(string username, string password)
         {
+            ID = S_NextID++;
             Username = username;
             Password = password;
             Token = "";
@@ -28,9 +30,11 @@ namespace MTCG.UserClass
         #endregion
 
         #region Credentials
-        public string Username { get; private set; }
-        public string Password { get; private set; }
-        public string Token { get; private set; }
+        public int ID { get; }
+        public static int S_NextID { get; set; } = 0; // Class-wide counter for IDs
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Token { get; set; }
 
         public void Register()
         {
@@ -48,16 +52,16 @@ namespace MTCG.UserClass
         #endregion
 
         #region Ressources
-        public Card[] Stack { get; private set; }
-        public Card[] Deck { get; private set; }
-        public int Coins { get; private set; }
+        public List<Card> Stack { get; } // Collections don't need setters, as they have functions to manage themselves
+        public List<Card> Deck { get; }
+        public int Coins { get; set; }
 
         public void AcquireCards()
         {
             // Initial set of random cards is put into user's Stack
         }
-        public void TradeCards(Card givenCard, Card receivedCard) 
-        { 
+        public void TradeCards(Card givenCard, Card receivedCard)
+        {
             // givenCard is traded for receivedCard
         }
         public void BuyPackage()
@@ -72,7 +76,7 @@ namespace MTCG.UserClass
         #endregion
 
         #region Competition
-        public int ELO { get; private set; }
+        public int ELO { get; set; }
 
         public void Battle()
         {

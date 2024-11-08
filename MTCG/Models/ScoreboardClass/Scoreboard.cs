@@ -1,4 +1,4 @@
-﻿namespace MTCG.ScoreboardClass
+﻿namespace MTCG.Models.ScoreboardClass
 {
     internal class Scoreboard
     {
